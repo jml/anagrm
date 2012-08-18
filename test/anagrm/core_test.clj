@@ -2,6 +2,11 @@
   (:use clojure.test
         anagrm.core))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest test-anagram-of-self
+  (is (anagram? "jabberwocky" "jabberwocky")))
+
+(deftest test-anagram-of-palindrome
+  (is (anagram? "jabberwocky" "ykcowrebbaj")))
+
+(deftest test-not-actually-anagram
+  (is (not (anagram? "cabbage" "brillig"))))
