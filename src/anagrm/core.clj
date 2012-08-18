@@ -4,7 +4,7 @@
 
 (use '[clojure.java.io :only (reader)])
 
-(def ^:const DICTIONARY-FILE "/usr/share/dict/words")
+(defonce ^:const dictionary-file "/usr/share/dict/words")
 
 (defn anagram?
   "Is x an anagram of y?"
@@ -21,7 +21,7 @@
   (filter (partial anagram? base-word) word-list))
 
 (defn word-search [search?]
-  (with-open [dict (reader DICTIONARY-FILE)]
+  (with-open [dict (reader dictionary-file)]
     (doseq [word (filter search? (line-seq dict))]
       (println word))))
 
