@@ -1,8 +1,7 @@
 (ns anagrm.core
   (:gen-class)
-  (:require [clojure.string :as su]))
-
-(use '[clojure.java.io :only (reader)])
+  (:require [clojure.java.io :refer (reader)]
+            [clojure.string :refer (lower-case)]))
 
 (defonce ^:const dictionary-file "/usr/share/dict/words")
 
@@ -15,7 +14,7 @@
   (every? #(>= (get a (key %) -1) (val %)) b))
 
 (defn sub-anagram? [base-word sub-word]
-  (sub-frequency? (frequencies (su/lower-case base-word)) (frequencies (su/lower-case sub-word))))
+  (sub-frequency? (frequencies (lower-case base-word)) (frequencies (lower-case sub-word))))
 
 (defn find-anagrams [base-word word-list]
   (filter (partial anagram? base-word) word-list))
