@@ -10,6 +10,8 @@
 (deftest test-subanagram
   (are [x y] (sub-anagram? x y)
        "jabberwocky" "jabberwocky"
+       "jabberwocky" "JABBERWOCKY"
+       "JABBERWOCKY" "jabberwocky"
        "jabberwocky" "jabber"
        "specific"    "pie"
        "specific"    "piscie"
