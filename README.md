@@ -1,6 +1,7 @@
 # anagrm
 
-FIXME: description
+Stupid little tool to find anagrams.  Essentially something to help me start
+learning Clojure.
 
 ## Installation
 
@@ -24,12 +25,9 @@ FIXME: listing of options this app accepts.
 
 ...
 
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
 Copyright © 2012 FIXME
 
-Distributed under the Eclipse Public License, the same as Clojure.
+Distributed under the MIT license.
