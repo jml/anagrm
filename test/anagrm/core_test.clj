@@ -3,10 +3,6 @@
         anagrm.core))
 
 (deftest test-anagram-of-self
-  (is (anagram? "jabberwocky" "jabberwocky")))
-
-(deftest test-anagram-of-palindrome
-  (is (anagram? "jabberwocky" "ykcowrebbaj")))
-
-(deftest test-not-actually-anagram
+  (is (anagram? "jabberwocky" "jabberwocky"))
+  (is (anagram? "jabberwocky" "ykcowrebbaj"))
   (is (not (anagram? "cabbage" "brillig"))))
